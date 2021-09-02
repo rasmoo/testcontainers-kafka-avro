@@ -99,7 +99,7 @@ public class KafkaContainer extends GenericContainer<KafkaContainer> {
         command += "/etc/confluent/docker/launch \n";
 
         copyFileToContainer(
-                Transferable.of(command.getBytes(StandardCharsets.UTF_8), 700),
+                Transferable.of(command.getBytes(StandardCharsets.UTF_8), 0700),
                 STARTER_SCRIPT
         );
     }
